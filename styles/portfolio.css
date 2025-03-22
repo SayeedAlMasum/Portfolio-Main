@@ -1,0 +1,63 @@
+/* Custom Colors */
+:root {
+    --orange: #FD6E0A;
+    --orange-light: #FF8C42;
+    --orange-dark: #E65C00;
+    --secondary-bg: #FFF8F3;
+    --dark-2: #474747;
+}
+
+/* Apply orangish theme */
+.text-orange {
+    color: var(--orange);
+}
+
+.btn-orange {
+    background-color: var(--orange);
+    color: white;
+    border: none;
+}
+
+.btn-orange:hover {
+    background-color: var(--orange-dark);
+    color: white;
+}
+
+.btn-outline-orange {
+    border: 2px solid var(--orange);
+    color: var(--orange);
+}
+
+.btn-outline-orange:hover {
+    background-color: var(--orange);
+    color: white;
+}
+
+.secondary-bg {
+    background-color: var(--secondary-bg);
+}
+
+.dark-2 {
+    color: var(--dark-2);
+}
+
+/* Navbar hover effect */
+.nav-link:hover {
+    color: var(--orange) !important;
+}
+
+/* Banner profile picture */
+.banner-profile-pic {
+    border: 5px solid var(--orange);
+}
+
+/* Skill cards */
+.skill {
+    border: 2px;
+}
+
+.skill:hover {
+    background-color: var(--secondary-bg);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
