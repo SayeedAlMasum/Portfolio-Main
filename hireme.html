@@ -1,0 +1,86 @@
+<!-- Hire Me Page (hireme.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Me - Sayeed's Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFF8F3; /* Light background */
+        }
+        header {
+            background-color: #FFF8F3; /* Orange header */
+            color: #ff6f00;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin-bottom: 10px;
+        }
+        .btn-light {
+            background-color: white;
+            color: #ff6f00; /* Orange text for button */
+            border: none;
+        }
+        .btn-light:hover {
+            background-color: #e65c00; /* Darker orange on hover */
+            color: white;
+        }
+        main {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .form-label {
+            color: #333; /* Dark text for labels */
+            font-weight: bold;
+        }
+        .form-control {
+            border: 1px solid #ff6f00; /* Orange border for inputs */
+        }
+        .form-control:focus {
+            border-color: #e65c00; /* Darker orange on focus */
+            box-shadow: 0 0 5px rgba(255, 111, 0, 0.5); /* Orange glow */
+        }
+        .btn-primary {
+            background-color: #ff6f00; /* Orange button */
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #e65c00; /* Darker orange on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Hire Me</h1>
+        
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mt-4">
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Your Email</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </main><br><br><br><br><br>
+    <center>
+        <a href="index.html" class="btn btn-light">Back to Home</a>
+    </center>
+</body>
+</html>
