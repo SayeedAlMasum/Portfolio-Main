@@ -4,70 +4,130 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sayeed Al Masum - CV</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!-- Custom CSS -->
   <style>
+    :root {
+      --orange: #FD6E0A;
+      --orange-dark: #E65C00;
+      --secondary-bg: #FFF8F3;
+      --dark-2: #474747;
+    }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
     }
+
+    /* Header */
     .cv-header {
-      background-color: #FFF8F3; /* Orange header */
-      color: rgb(0, 0, 0);
-      padding: 20px;
+      background-color: var(--secondary-bg);
+      padding: 30px 20px;
       text-align: center;
+      border-bottom: 3px solid var(--orange);
     }
+    .cv-header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--orange-dark);
+      margin-bottom: 10px;
+    }
+    .cv-header p {
+      margin: 3px 0;
+      font-size: 0.95rem;
+    }
+    .cv-header a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .cv-header a:hover {
+      text-decoration: underline;
+    }
+
+    /* Sections */
     .cv-section {
       background-color: white;
-      padding: 20px;
-      margin: 20px 0;
+      padding: 25px;
+      margin: 40px 0;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     }
     .cv-section h2 {
-      color: #ff6f00; /* Orange headings */
+      position: relative;
+      padding-left: 15px;
+      font-weight: 600;
+      font-size: 1.4rem;
       margin-bottom: 20px;
+      color: var(--orange-dark);
     }
+    .cv-section h2::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 70%;
+      background-color: var(--orange);
+      border-radius: 3px;
+    }
+
+    /* List Styling */
     .cv-section ul {
-      list-style-type: none;
+      list-style: none;
       padding-left: 0;
     }
     .cv-section ul li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 20px;
     }
-    .cv-section a {
-      color: #ff6f00; /* Orange links */
+    .cv-section ul li::before {
+      content: "➤";
+      color: var(--orange);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
+
+    /* Project links */
+    .project-item {
+      margin-bottom: 10px;
+      padding: 12px;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .project-item:hover {
+      background-color: var(--secondary-bg);
+      transform: translateY(-3px);
+    }
+    .project-item a {
+      color: #007bff;
+      font-weight: 600;
       text-decoration: none;
     }
-    .cv-section a:hover {
+    .project-item a:hover {
       text-decoration: underline;
     }
-    .btn-orange {
-      background-color: #ff6f00; /* Orange button */
-      color: white;
-      border: none;
-    }
-    .btn-orange:hover {
-      background-color: #e65c00; /* Darker orange on hover */
-    }
-    .btn-outline-orange {
-      border: 1px solid #ff6f00; /* Orange outline button */
-      color: #ff6f00;
-    }
-    .btn-outline-orange:hover {
-      background-color: #ff6f00; /* Solid orange on hover */
-      color: white;
-    }
-      .project-item a {
-  color: #007bff; /* Blue color for links */
-  text-decoration: none; /* Remove default underline */
-  font-weight: bold; /* Optional: Make links bold */
-}
 
-.project-item a:hover {
-  text-decoration: underline; /* Underline on hover */
-}
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      padding: 15px;
+      font-size: 0.9rem;
+      color: #777;
+      background: #fafafa;
+      border-top: 1px solid #eee;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -76,7 +136,7 @@
     <h1>Sayeed Al Masum</h1>
     <p>71/1 Manikdi, Dhaka Cantonment, Dhaka-1206, Bangladesh</p>
     <p>Contact: +8801521559301 | Email: sayeedalmasum100@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/SayeedAlMasum" target="_blank" style="color: #007bff;">github.com/SayeedAlMasum</a></p>
+    <p>GitHub: <a href="https://github.com/SayeedAlMasum" target="_blank">github.com/SayeedAlMasum</a></p>
   </div>
 
   <!-- Main Content -->
@@ -85,18 +145,15 @@
     <div class="cv-section">
       <h2>Education</h2>
       <ul>
-        <li>
-          <strong>Bachelor of Science in Computer Science and Engineering</strong><br>
+        <li><strong>Bachelor of Science in Computer Science and Engineering</strong><br>
           International University of Business Agriculture and Technology (IUBAT), Bangladesh<br>
-          Graduation: October 2025
+          CGPA: 3.45/4.00 | Passing Year: 2025
         </li>
-        <li>
-          <strong>Higher Secondary Certificate (H.S.C) – Science</strong><br>
+        <li><strong>Higher Secondary Certificate (H.S.C) – Science</strong><br>
           Shaheed Ramizuddin Cantonment College, Dhaka, Bangladesh<br>
           GPA: 5.00/5.00 | Passing Year: 2019
         </li>
-        <li>
-          <strong>Secondary School Certificate (S.S.C) – Science</strong><br>
+        <li><strong>Secondary School Certificate (S.S.C) – Science</strong><br>
           Dhaka Cantonment Board Adarsha Biddyaniketon, Bangladesh<br>
           GPA: 5.00/5.00 (Golden) | Passing Year: 2017
         </li>
@@ -107,8 +164,13 @@
     <div class="cv-section">
       <h2>Work Experience</h2>
       <ul>
-        <li>
-          <strong>Data Entry Employee</strong><br>
+        <li><strong>ASP .Net Developer</strong><br>
+          FiroTech, Dhaka, Bangladesh (Jun 2025 – Present)<br>
+          Features & Modules : Authentication & Authorization, CRUD & API Development, Database & EF Core, 
+          MVC & N-Tier Architecture, UI/UX Implementations, Business & Domain-Specific Modules, Tools & Practices 
+          (Git/GitHub, CI/CD Pipeline, Azure deployment knowledge, Agile/Scrum collaboration).
+        </li>
+        <li><strong>Data Entry Employee</strong><br>
           Dynamic Flow, Dhaka, Bangladesh (2020 – 2020)<br>
           - Contributed to data entry tasks and ensured accuracy in data management.<br>
           - Assisted in a .NET-based project, gaining hands-on experience in software development.
@@ -131,9 +193,11 @@
 
     <!-- Certifications -->
     <div class="cv-section">
-      <h2>Certifications</h2>
+      <h2>Certifications & Training</h2>
       <ul>
-        <li><strong>ASP.NET Training Certificate</strong></li>
+        <li><strong>Certified ASP.NET Training from Edge, ICT Ministry, Bangladesh</strong><br>
+          Year: Oct 2024 - Aug 2025
+        </li>
       </ul>
     </div>
 
@@ -141,8 +205,7 @@
     <div class="cv-section">
       <h2>Research Experience</h2>
       <ul>
-        <li>
-          <strong>Research on Machine Learning: Infectious Disease Detection</strong><br>
+        <li><strong>Research on Machine Learning: Infectious Disease Detection</strong><br>
           International University of Business Agriculture and Technology (IUBAT), Bangladesh<br>
           - Conducting research on the application of machine learning algorithms for early detection of infectious diseases.<br>
           - Developing predictive models to improve accuracy and efficiency in disease diagnosis.<br>
@@ -155,21 +218,10 @@
     <div class="cv-section">
       <h2>Projects</h2>
       <ul>
-        <li class="project-item">
-          <a href="https://github.com/SayeedAlMasum/SkillExchangeManagementSystem" target="_blank">Skill Exchange Management System</a>
-        </li>
-        <li class="project-item">
-          <a href="https://github.com/SayeedAlMasum/Portfolio" target="_blank">Portfolio Website</a>
-        </li>
-        <li class="project-item">
-          <a href="https://github.com/SayeedAlMasum/Hero-Travel" target="_blank">Hero Travel</a>
-        </li>
-        <li class="project-item">
-          <a href="https://github.com/SayeedAlMasum/New-Year-Offer-Banner" target="_blank">New Year Offer Banner</a>
-        </li>
-        <li class="project-item">
-          <a href="https://github.com/SayeedAlMasum/Architects" target="_blank">Architects Website</a>
-        </li>
+        <li class="project-item"><a href="https://github.com/SayeedAlMasum/SkillExchangeMVC" target="_blank">Skill Exchange Management System</a></li>
+        <li class="project-item"><a href="https://github.com/SayeedAlMasum/LibraryManagementSystem" target="_blank">Library Management System</a></li>
+        <li class="project-item"><a href="https://github.com/SayeedAlMasum/MiniAccountManagementSystem" target="_blank">Mini Account Management System</a></li>
+        <li class="project-item"><a href="https://github.com/SayeedAlMasum/CarParkingManagementSystem" target="_blank">Car Parking Management System</a></li>
       </ul>
     </div>
 
@@ -195,6 +247,11 @@
       </ul>
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Sayeed Al Masum | Powered by Bootstrap
+  </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
