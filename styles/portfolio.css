@@ -16,6 +16,7 @@
     background-color: var(--orange);
     color: white;
     border: none;
+    padding: 10px 20px;
 }
 
 .btn-orange:hover {
@@ -54,10 +55,158 @@
 /* Skill cards */
 .skill {
     border: 2px;
+    margin-bottom: 1rem;
 }
 
 .skill:hover {
     background-color: var(--secondary-bg);
     transform: translateY(-5px);
     transition: all 0.3s ease;
+}
+
+/* Remove default body margin/padding issues */
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+    /* Remove excessive spacing on mobile */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Reduce section margins on mobile */
+    .my-5 {
+        margin-top: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    /* Reduce padding in sections */
+    .about, .skills, .resume, .projects-section {
+        padding: 1.5rem !important;
+    }
+    
+    /* Adjust banner spacing */
+    .banner {
+        padding: 1rem 0;
+    }
+    
+    .banner-title {
+        font-size: 2rem !important;
+    }
+    
+    .banner-description {
+        font-size: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Fix skill grid spacing */
+    .skills .row {
+        gap: 1rem;
+        margin: 0;
+    }
+    
+    .skills .col {
+        padding: 0.5rem !important;
+        margin-bottom: 1rem;
+    }
+    
+    /* Reduce skill icon size on mobile */
+    .skill-icon {
+        width: 60px !important;
+        height: 40px !important;
+    }
+    
+    /* Fix button spacing */
+    .btn-orange {
+        margin: 5px 5px 10px 0;
+        font-size: 0.9rem;
+    }
+    
+    /* Remove extra spaces in resume section */
+    .resume .col-md-6 {
+        margin-bottom: 1rem;
+    }
+    
+    /* Fix footer spacing */
+    footer {
+        padding: 2rem 0 !important;
+    }
+    
+    /* Ensure no horizontal scroll */
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* Resume Section - Full screen layout */
+@media (min-width: 769px) {
+    .resume .col-md-6 {
+        flex: 0 0 70%;
+        max-width: 70%;
+    }
+}
+
+/* Projects Section - Prevent text overflow */
+.projects-section {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.projects-section p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.projects-section a {
+    word-break: break-all;
+    color: var(--orange);
+    text-decoration: none;
+}
+
+.projects-section a:hover {
+    text-decoration: underline;
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+    /* Further reduce spacing */
+    .my-5 {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* Compact text */
+    .section-title {
+        font-size: 1.5rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .section-description {
+        font-size: 0.9rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* Adjust navbar */
+    .navbar-brand {
+        font-size: 1.5rem !important;
+    }
+    
+    /* Social icons smaller */
+    .social-icons img {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    
+    /* Tighter container spacing */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
