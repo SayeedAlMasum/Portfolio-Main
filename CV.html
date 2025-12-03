@@ -117,7 +117,59 @@
     .project-item a:hover {
       text-decoration: underline;
     }
+/* Back to Home Button Styling */
+.btn-orange {
+    background-color: var(--orange);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(253, 110, 10, 0.3);
+}
 
+.btn-orange:hover {
+    background-color: var(--orange-dark);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(253, 110, 10, 0.4);
+}
+
+.btn-orange:active {
+    transform: translateY(-1px);
+}
+
+/* Button Container for centered positioning */
+.button-container {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+}
+
+/* Alternative: Floating Back Button (Optional) */
+.back-button-fixed {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .btn-orange {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .back-button-fixed {
+        bottom: 20px;
+        right: 20px;
+    }
+}
     /* Footer */
     footer {
       margin-top: 50px;
@@ -138,7 +190,52 @@
     <p>Contact: +8801521559301 | Email: sayeedalmasum100@gmail.com</p>
     <p>GitHub: <a href="https://github.com/SayeedAlMasum" target="_blank">github.com/SayeedAlMasum</a></p>
   </div>
-
+ <!-- Work Experience -->
+  <div class="container">
+    <div class="cv-section">
+      <h2>Work Experience</h2>
+      <ul>
+        <li><strong>Software Engineer(.Net)</strong><br>
+          <span style="color:#007bff;">Octopi Digital Limited</span> (Sep 2025 – Present)<br>
+          Features & Modules : Authentication & Authorization, CRUD & API Development, Database & EF Core, 
+          MVC & N-Tier Architecture, UI/UX Implementations, Business & Domain-Specific Modules, Tools & Practices 
+          (Git/GitHub, CI/CD Pipeline, Azure deployment knowledge, Agile/Scrum collaboration).
+        </li>
+        <li><strong>Software Engineer(.NET / Intern)</strong><br>
+          <span style="color:#007bff;">FiroTech, Dhaka, Bangladesh</span> (May 2025 – Aug 2025)<br>
+          Features & Modules : Authentication & Authorization, CRUD & API Development, Database & EF Core, 
+          MVC & N-Tier Architecture, UI/UX Implementations, Business & Domain-Specific Modules, Tools & Practices 
+          (Git/GitHub, CI/CD Pipeline, Azure deployment knowledge, Agile/Scrum collaboration).
+        </li>
+        <li><strong>Data Entry Operator</strong><br>
+          <span style="color:#007bff;">Dynamic Flow, Dhaka, Bangladesh</span> (2020 – 2020)<br>
+          - Contributed to data entry tasks and ensured accuracy in data management.<br>
+          - Assisted in a .NET-based project, gaining hands-on experience in software development.
+        </li>
+      </ul>
+    </div>
+    <!-- Certifications -->
+    <div class="cv-section">
+      <h2>Certifications & Training</h2>
+      <ul>
+        <li><strong>Certified C#/.NET Training from Edge, ICT Ministry, Bangladesh</strong><br>
+          Year: Oct 2024 - Aug 2025
+        </li>
+      </ul>
+    </div>
+        <!-- Technical Skills -->
+    <div class="cv-section">
+      <h2>Technical Skills</h2>
+      <ul>
+        <li><strong>Programming Languages:</strong> C#, C++, C, Python, Java, JavaScript</li>
+        <li><strong>Web Development:</strong> HTML, CSS (Tailwind, Bootstrap), ASP.NET</li>
+        <li><strong>Database Management:</strong> MySQL, SQL Server</li>
+        <li><strong>Machine Learning:</strong> Research and development in infectious disease detection</li>
+        <li><strong>Tools:</strong> GitHub, Visual Studio, Code::Blocks</li>
+        <li><strong>Other Skills:</strong> Problem Solving, Competitive Programming</li>
+      </ul>
+    </div>
+</div>
   <!-- Main Content -->
   <div class="container">
     <!-- Education -->
@@ -147,7 +244,7 @@
       <ul>
         <li><strong>Bachelor of Science in Computer Science and Engineering</strong><br>
           International University of Business Agriculture and Technology (IUBAT), Bangladesh<br>
-          CGPA: 3.45/4.00 | Passing Year: 2025
+          CGPA: 3.41/4.00 | Passing Year: 2025
         </li>
         <li><strong>Higher Secondary Certificate (H.S.C) – Science</strong><br>
           Shaheed Ramizuddin Cantonment College, Dhaka, Bangladesh<br>
@@ -160,46 +257,7 @@
       </ul>
     </div>
 
-    <!-- Work Experience -->
-    <div class="cv-section">
-      <h2>Work Experience</h2>
-      <ul>
-        <li><strong>ASP .Net Developer</strong><br>
-          FiroTech, Dhaka, Bangladesh (Jun 2025 – Present)<br>
-          Features & Modules : Authentication & Authorization, CRUD & API Development, Database & EF Core, 
-          MVC & N-Tier Architecture, UI/UX Implementations, Business & Domain-Specific Modules, Tools & Practices 
-          (Git/GitHub, CI/CD Pipeline, Azure deployment knowledge, Agile/Scrum collaboration).
-        </li>
-        <li><strong>Data Entry Employee</strong><br>
-          Dynamic Flow, Dhaka, Bangladesh (2020 – 2020)<br>
-          - Contributed to data entry tasks and ensured accuracy in data management.<br>
-          - Assisted in a .NET-based project, gaining hands-on experience in software development.
-        </li>
-      </ul>
-    </div>
-
-    <!-- Technical Skills -->
-    <div class="cv-section">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><strong>Programming Languages:</strong> C#, C++, C, Python, Java, JavaScript</li>
-        <li><strong>Web Development:</strong> HTML, CSS (Tailwind, Bootstrap), ASP.NET</li>
-        <li><strong>Database Management:</strong> MySQL, SQL Server</li>
-        <li><strong>Machine Learning:</strong> Research and development in infectious disease detection</li>
-        <li><strong>Tools:</strong> GitHub, Visual Studio, Code::Blocks</li>
-        <li><strong>Other Skills:</strong> Problem Solving, Competitive Programming</li>
-      </ul>
-    </div>
-
-    <!-- Certifications -->
-    <div class="cv-section">
-      <h2>Certifications & Training</h2>
-      <ul>
-        <li><strong>Certified ASP.NET Training from Edge, ICT Ministry, Bangladesh</strong><br>
-          Year: Oct 2024 - Aug 2025
-        </li>
-      </ul>
-    </div>
+   
 
     <!-- Research Experience -->
     <div class="cv-section">
@@ -218,7 +276,7 @@
     <div class="cv-section">
       <h2>Projects</h2>
       <ul>
-        <li class="project-item"><a href="https://github.com/SayeedAlMasum/SkillExchangeMVC" target="_blank">Skill Exchange Management System</a></li>
+        <li class="project-item"><a href="https://skillexchangemvc-web-agaubmb3euhkb4c3.centralindia-01.azurewebsites.net/" target="_blank">Skill Exchange Management System</a></li>
         <li class="project-item"><a href="https://github.com/SayeedAlMasum/LibraryManagementSystem" target="_blank">Library Management System</a></li>
         <li class="project-item"><a href="https://github.com/SayeedAlMasum/MiniAccountManagementSystem" target="_blank">Mini Account Management System</a></li>
         <li class="project-item"><a href="https://github.com/SayeedAlMasum/CarParkingManagementSystem" target="_blank">Car Parking Management System</a></li>
@@ -248,9 +306,14 @@
     </div>
   </div>
 
+<div class="button-container">
+    <a class="btn btn-orange" href="index.html">
+        <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+</div>
   <!-- Footer -->
   <footer>
-    © 2025 Sayeed Al Masum | Powered by Bootstrap
+    © 2025 Sayeed Al Masum 
   </footer>
 
   <!-- Bootstrap JS -->
